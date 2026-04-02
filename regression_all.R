@@ -11,10 +11,10 @@ library(rio)
 library(dplyr)
 library(ggplot2)
 
-setwd("C:/Users/riade/OneDrive - Uppsala universitet/Thesis project TFM")
+
 
 ####################################################################################################
-# 1. Shared data (taxonomy and metadata)
+# 1. Load common data (taxonomy and metadata)
 taxonomies <- rio::import("Data/taxonomy_students_females.csv")
 match_covariates <- rio::import("Data/FEMALE_Covariates_Cases_Control.csv", dec = ",")
 rownames(match_covariates) <- match_covariates[, 1]
