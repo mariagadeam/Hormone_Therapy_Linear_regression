@@ -5,7 +5,8 @@
 # Linear regression for all taxonomic levels and data types
 # Initial date: 2026-03-31
 
-# Load the libraries 
+# ---------------------------------------------------------------------------
+# 1. Load the libraries 
 
 library(rio)
 library(dplyr)
@@ -13,15 +14,15 @@ library(ggplot2)
 
 
 
-####################################################################################################
-# 1. Load common data (taxonomy and metadata)
+# ---------------------------------------------------------------------------
+# 2. Load common data (taxonomy and metadata)
 taxonomies <- rio::import("Data/taxonomy_students_females.csv")
 match_covariates <- rio::import("Data/FEMALE_Covariates_Cases_Control.csv", dec = ",")
 rownames(match_covariates) <- match_covariates[, 1]
 match_covariates <- match_covariates[, -1]
 
-####################################################################################################
-# 2. Function to run the regression analysis for a given taxonomic level and data type
+# ---------------------------------------------------------------------------
+# 3. Function to run the regression analysis for a given taxonomic level and data type
 run_regression_analysis <- function(data_file, data_type, tax_level, output_rdata, plot_widths, plot_heights) {
   
   # Load specific dataset
@@ -172,8 +173,8 @@ run_regression_analysis <- function(data_file, data_type, tax_level, output_rdat
        basic_plot, adjusted_plot, formatted_results, file = output_rdata)
 }
 
-####################################################################################################
-# 3. Define configurations for all 6 analyses
+# ---------------------------------------------------------------------------
+# 4. Define the configurations for all 6 analyses
 analyses <- list(
   # CLR model
   list(
@@ -210,8 +211,8 @@ analyses <- list(
   )
 )
 
-####################################################################################################
-# 4. Execution block: Iterate through the configurations and run each analysis
+# ---------------------------------------------------------------------------
+# 5. Execution each analysis
 for (analysis in analyses) {
   run_regression_analysis(
     data_file = analysis$file,
