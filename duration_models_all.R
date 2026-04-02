@@ -21,10 +21,7 @@ library(tibble)
 library(pbkrtest)
 
 # ---------------------------------------------------------------------------
-## 2. Set working directory and load common data (set sample number to row name)
-
-setwd("C:/Users/riade/OneDrive - Uppsala universitet/Thesis project TFM")
-load("Rdata/duration_all_analyses_rdata.RData")
+## 2. Load common data 
 
 # Duration time 
 
