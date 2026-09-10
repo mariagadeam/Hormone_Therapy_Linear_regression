@@ -12,9 +12,12 @@ For this project, bacterial abundance profiles from urine samples of peri- and p
 
 ## Workflow
 
-The bacterial abundance of samples were given in relative abundance and centered-log ratio (CLR) transformed. In order to enable a more detailed assessment of the relationship between HT and the urinary microbiome,  the data were analyzed at three taxonomic levels: species, genus, and family.
+The project was strustured into 3 main aims:
+  1) to compare between exposed and unexposed participants:
+  2) to compare between recent (<4 months) and continuous users (>4 months);
+  3) to assess temporal dynamics of Hormone Therapy.
 
-As a preliminary step, diversity metrics were evaluated, including both alpha and beta diversity analyses. Following this, two linear regression models were fitted: a minimally adjusted model accounting only for batch effects, and a fully adjusted model including additional covariates to control for potential confounding.
-The effect of HT duration was then examined by comparing continuous use (>4 months) versus recent use (<4 months), applying the same modeling framework.
+
+The bacterial abundance of samples were given in relative abundance and centered-log ratio (CLR) transformed. In order to enable a more detailed assessment of the relationship between HT and the urinary microbiome, the data were analyzed at three taxonomic levels: species, genus, and family. For all analyses, two linear regression models were fitted: a minimally adjusted model accounting only for batch effects, and a fully adjusted model including additional covariates to control for potential confounding.
 
 All analyses were conducted in R v4.5.2 (R Foundation for Statistical Computing, Vienna, Austria) within the RStudio environment. 
