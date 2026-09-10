@@ -13,7 +13,7 @@ For this project, bacterial abundance profiles from urine samples of peri- and p
 ## Workflow
 
 The project was strustured into 3 main aims:
-  1) to compare between exposed and unexposed participants:
+  1) to compare between exposed and unexposed participants;
   2) to compare between recent (<4 months) and continuous users (>4 months);
   3) to assess temporal dynamics of Hormone Therapy.
 
